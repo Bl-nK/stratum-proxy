@@ -152,7 +152,7 @@ public class Configuration {
     }
 
     public Integer getPoolSubscribeTimeout() {
-        return poolSubscribeTimeout();
+        return this.poolSubscribeTimeout;
     }
     
     public void setPoolSubscribeTimeout(Integer poolSubscribeTimeout) {
