@@ -94,8 +94,8 @@ public class CommandLineOptions {
     @Option(name = "--help", usage = "Print this help.", handler = BooleanOptionHandler.class)
     private boolean isHelpRequested;
 
-    @Option(name = "--pool-connection-timeout", usage = "Delay in seconds for connecting to the pool. (15 seconds by default).")
-    private Integer poolConnectionTimeout;
+    @Option(name = "--pool-subscribe-timeout", usage = "Delay in seconds for subscribing to the pool. (15 seconds by default).")
+    private Integer poolSubscribeTimeout;
     
     @Option(name = "--pool-connection-retry-delay", usage = "Delay in seconds before retry to connect to an inactive pool. (5 seconds by default). 0 to disable retry.")
     private Integer poolConnectionRetryDelay;
@@ -234,6 +234,10 @@ public class CommandLineOptions {
         return isHelpRequested;
     }
 
+    public Integer getPoolSubscribeTimeout() {
+        return poolSubscribeTimeout;
+    }
+    
     public Integer getPoolConnectionRetryDelay() {
         return poolConnectionRetryDelay;
     }
@@ -274,10 +278,6 @@ public class CommandLineOptions {
         return numberOfSubmit;
     }
 
-    public Integer getPoolConnectionTimeout() {
-        return poolConnectionTimeout;
-    }
-    
     public Integer getPoolReconnectStabilityPeriod() {
         return poolReconnectStabilityPeriod;
     }
