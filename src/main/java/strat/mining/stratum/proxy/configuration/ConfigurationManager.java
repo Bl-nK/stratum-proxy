@@ -330,7 +330,7 @@ public class ConfigurationManager {
 				pool.setExtranonceSubscribeEnabled(isExtranonceSubscribe);
 				pool.setNumberOfSubmit(numberOfSubmit);
 				pool.setPriority(counter);
-				pool.setSubscribeTimeout(poolSubscribeTimeout);
+				pool.setPoolSubscribeTimeout(poolSubscribeTimeout);
 				pool.setConnectionRetryDelay(poolConnectionRetryDelay);
 				pool.setReconnectStabilityPeriod(poolReconnectStabilityPeriod);
 				pool.setNoNotifyTimeout(poolNoNotifyTimeout);
