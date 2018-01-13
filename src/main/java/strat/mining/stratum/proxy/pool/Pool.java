@@ -258,7 +258,7 @@ public class Pool {
             }
         };
         subscribeResponseTimeoutTask.setName("SubscribeTimeoutTask-" + getName());
-        Timer.getInstance().schedule(subscribeResponseTimeoutTask, 5000);
+        Timer.getInstance().schedule(subscribeResponseTimeoutTask, ConfigurationManager.getInstance().getSubscribeTimeout());
     }
 
     /**
