@@ -201,7 +201,7 @@ public class ConfigurationManager {
 		getworkListenPort = configuration.getGetworkListenPort() != null ? configuration.getGetworkListenPort() : getworkListenPort;
 		getworkBindAddress = configuration.getGetworkListenAddress() != null ? configuration.getGetworkListenAddress() : getworkBindAddress;
 
-		poolSubscribeTimeout = configuration.getPoolSubscribeTimeout() != null ? configuration.GetPoolSubscribeTimeout() : poolSubscribeTimeout;
+		poolSubscribeTimeout = configuration.getPoolSubscribeTimeout() != null ? configuration.getPoolSubscribeTimeout() : poolSubscribeTimeout;
 		poolConnectionRetryDelay = configuration.getPoolConnectionRetryDelay() != null ? configuration.getPoolConnectionRetryDelay() : poolConnectionRetryDelay;
 		poolReconnectStabilityPeriod = configuration.getPoolReconnectStabilityPeriod() != null ? configuration.getPoolReconnectStabilityPeriod() : poolReconnectStabilityPeriod;
 		poolNoNotifyTimeout = configuration.getPoolNoNotifyTimeout() != null ? configuration.getPoolNoNotifyTimeout() : poolNoNotifyTimeout;
