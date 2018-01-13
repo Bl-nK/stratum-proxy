@@ -128,6 +128,7 @@ public class Pool {
     // Time of sampling shares to calculate hash rate
     private Integer samplingHashratePeriod = Constants.DEFAULT_POOL_HASHRATE_SAMPLING_PERIOD * 1000;
 
+    private Integer poolSubscribeTimeout = Constants.DEFAULT_POOL_SUBSCRIBE_TIMEOUT * 1000;
     private Integer connectionRetryDelay = Constants.DEFAULT_POOL_CONNECTION_RETRY_DELAY;
     private Integer reconnectStabilityPeriod = Constants.DEFAULT_POOL_RECONNECTION_STABILITY_PERIOD;
     private Integer noNotifyTimeout = Constants.DEFAULT_NOTIFY_NOTIFICATION_TIMEOUT;
@@ -258,7 +259,7 @@ public class Pool {
             }
         };
         subscribeResponseTimeoutTask.setName("SubscribeTimeoutTask-" + getName());
-        Timer.getInstance().schedule(subscribeResponseTimeoutTask, ConfigurationManager.getInstance().getSubscribeTimeout());
+        Timer.getInstance().schedule(subscribeResponseTimeoutTask, poolSubscribeTimeout);
     }
 
     /**
@@ -836,6 +837,10 @@ public class Pool {
         return isExtranonceSubscribeEnabled;
     }
 
+    public void setPoolSubscribeTimeout( Integer poolSubscribeTimeout ) {
+        this.poolSubscribeTimeout = poolSubscribeTimeout;
+    }
+    
     public void setConnectionRetryDelay(Integer connectionRetryDelay) {
         this.connectionRetryDelay = connectionRetryDelay;
     }
