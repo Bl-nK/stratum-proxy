@@ -34,7 +34,7 @@ public class Constants {
     public static final String DEFAULT_GETWORK_LISTENING_ADDRESS = "0.0.0.0";
 
     public static final Integer DEFAULT_POOL_PORT = 3333;
-    public static final Integer DEFAULT_POOL_CONNECTION_TIMEOUT = 15;
+    public static final Integer DEFAULT_POOL_SUBSCRIBE_TIMEOUT = 15;
     public static final Integer DEFAULT_POOL_CONNECTION_RETRY_DELAY = 5;
     public static final Integer DEFAULT_POOL_RECONNECTION_STABILITY_PERIOD = 5;
     public static final Integer DEFAULT_NOTIFY_NOTIFICATION_TIMEOUT = 240;
