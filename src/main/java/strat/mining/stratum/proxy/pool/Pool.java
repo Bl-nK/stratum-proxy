@@ -838,7 +838,7 @@ public class Pool {
     }
 
     public void setPoolSubscribeTimeout( Integer poolSubscribeTimeout ) {
-        this.poolSubscribeTimeout = poolSubscribeTimeout;
+        this.poolSubscribeTimeout = poolSubscribeTimeout * 1000;
     }
     
     public void setConnectionRetryDelay(Integer connectionRetryDelay) {
