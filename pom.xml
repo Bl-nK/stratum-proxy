@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>strat.mining.stratum</groupId>
 	<artifactId>stratum-proxy</artifactId>
-	<version>0.8.1-malthraxcrypto</version>
+	<version>0.8.1.1-malthraxcrypto</version>
 	<name>stratum-proxy</name>
 	<url>https://github.com/MalthraxCrypto/stratum-proxy</url>
 
