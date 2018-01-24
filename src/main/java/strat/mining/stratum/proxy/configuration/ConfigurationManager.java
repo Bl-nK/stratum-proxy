@@ -82,6 +82,7 @@ public class ConfigurationManager {
 	private Integer getworkListenPort = Constants.DEFAULT_GETWORK_LISTENING_PORT;
 	private String getworkBindAddress = Constants.DEFAULT_GETWORK_LISTENING_ADDRESS;
 
+	private Integer poolSubscribeTimeout = Constants.DEFAULT_POOL_SUBSCRIBE_TIMEOUT;
 	private Integer poolConnectionRetryDelay = Constants.DEFAULT_POOL_CONNECTION_RETRY_DELAY;
 	private Integer poolReconnectStabilityPeriod = Constants.DEFAULT_POOL_RECONNECTION_STABILITY_PERIOD;;
 	private Integer poolNoNotifyTimeout = Constants.DEFAULT_NOTIFY_NOTIFICATION_TIMEOUT;
@@ -200,6 +201,7 @@ public class ConfigurationManager {
 		getworkListenPort = configuration.getGetworkListenPort() != null ? configuration.getGetworkListenPort() : getworkListenPort;
 		getworkBindAddress = configuration.getGetworkListenAddress() != null ? configuration.getGetworkListenAddress() : getworkBindAddress;
 
+		poolSubscribeTimeout = configuration.getPoolSubscribeTimeout() != null ? configuration.getPoolSubscribeTimeout() : poolSubscribeTimeout;
 		poolConnectionRetryDelay = configuration.getPoolConnectionRetryDelay() != null ? configuration.getPoolConnectionRetryDelay() : poolConnectionRetryDelay;
 		poolReconnectStabilityPeriod = configuration.getPoolReconnectStabilityPeriod() != null ? configuration.getPoolReconnectStabilityPeriod() : poolReconnectStabilityPeriod;
 		poolNoNotifyTimeout = configuration.getPoolNoNotifyTimeout() != null ? configuration.getPoolNoNotifyTimeout() : poolNoNotifyTimeout;
@@ -328,6 +330,7 @@ public class ConfigurationManager {
 				pool.setExtranonceSubscribeEnabled(isExtranonceSubscribe);
 				pool.setNumberOfSubmit(numberOfSubmit);
 				pool.setPriority(counter);
+				pool.setPoolSubscribeTimeout(poolSubscribeTimeout);
 				pool.setConnectionRetryDelay(poolConnectionRetryDelay);
 				pool.setReconnectStabilityPeriod(poolReconnectStabilityPeriod);
 				pool.setNoNotifyTimeout(poolNoNotifyTimeout);
@@ -373,6 +376,7 @@ public class ConfigurationManager {
 		getworkListenPort = cliParser.getGetworkListenPort() != null ? cliParser.getGetworkListenPort() : getworkListenPort;
 		getworkBindAddress = cliParser.getGetworkBindAddress() != null ? cliParser.getGetworkBindAddress() : getworkBindAddress;
 
+		poolSubscribeTimeout = cliParser.getPoolSubscribeTimeout() != null ? cliParser.getPoolSubscribeTimeout() : poolSubscribeTimeout;
 		poolConnectionRetryDelay = cliParser.getPoolConnectionRetryDelay() != null ? cliParser.getPoolConnectionRetryDelay() : poolConnectionRetryDelay;
 		poolReconnectStabilityPeriod = cliParser.getPoolReconnectStabilityPeriod() != null ? cliParser.getPoolReconnectStabilityPeriod() : poolReconnectStabilityPeriod;
 		poolNoNotifyTimeout = cliParser.getPoolNoNotifyTimeout() != null ? cliParser.getPoolNoNotifyTimeout() : poolNoNotifyTimeout;
@@ -525,6 +529,7 @@ public class ConfigurationManager {
 					pool.setExtranonceSubscribeEnabled(isExtranonceSubscribe);
 					pool.setNumberOfSubmit(numberOfSubmit);
 					pool.setPriority(index);
+					pool.setPoolSubscribeTimeout(poolSubscribeTimeout);
 					pool.setConnectionRetryDelay(poolConnectionRetryDelay);
 					pool.setReconnectStabilityPeriod(poolReconnectStabilityPeriod);
 					pool.setNoNotifyTimeout(poolNoNotifyTimeout);
@@ -573,6 +578,10 @@ public class ConfigurationManager {
 		return logLevel;
 	}
 
+	public Integer getPoolSubscribeTimeout() {
+		return poolSubscribeTimeout;
+	}
+	
 	public Integer getPoolConnectionRetryDelay() {
 		return poolConnectionRetryDelay;
 	}

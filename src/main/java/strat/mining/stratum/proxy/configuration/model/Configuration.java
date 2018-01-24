@@ -36,6 +36,7 @@ public class Configuration {
     private Integer apiListenPort;
     private String apiListenAddress;
 
+    private Integer poolSubscribeTimeout;
     private Integer poolConnectionRetryDelay;
     private Integer poolReconnectStabilityPeriod;
     private Integer poolNoNotifyTimeout;
@@ -150,6 +151,14 @@ public class Configuration {
         this.apiListenAddress = apiListenAddress;
     }
 
+    public Integer getPoolSubscribeTimeout() {
+        return this.poolSubscribeTimeout;
+    }
+    
+    public void setPoolSubscribeTimeout(Integer poolSubscribeTimeout) {
+        this.poolSubscribeTimeout = poolSubscribeTimeout;
+    }
+    
     public Integer getPoolConnectionRetryDelay() {
         return poolConnectionRetryDelay;
     }
